@@ -17,7 +17,7 @@ function DetailsPokemon() {
 
     useEffect(() => {
         dispatch(getById(pokeId))
-    },);
+    });
 
 
 
