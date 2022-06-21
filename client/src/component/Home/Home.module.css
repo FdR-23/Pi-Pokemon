@@ -1,0 +1,13 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    background: rgb(235 147 21);
+    max-width: 100vw;
+}
+
+.listCard{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+}

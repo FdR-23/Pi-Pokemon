@@ -1,0 +1,33 @@
+ul.pagination {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    justify-content:center;
+  
+}
+
+ul.pagination li {
+    display: inline;
+    justify-content:center}
+
+ul.pagination li a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+ul.pagination li a.active {
+    background-color: rgb(182 18 18);
+    color: white;
+    border: solid;
+    border-radius: 11px;
+    margin-left: 3px;
+    margin-right: 3px;
+    box-shadow: -2px 1px 4px black;
+}
+
+
+ul.pagination li a.active:hover{
+    box-shadow: -2px 1px 4px white;
+}
