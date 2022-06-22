@@ -21,7 +21,7 @@ function Filtros({ setpage }) {
     const poketypes = useSelector((state) => state.pokemosType);
 
     function handleFilterByType(e) {
-        if (e.target.value === "All") { return }
+       
         e.preventDefault();
         dispatch(filterByType(e.target.value, allpoke))
         setpage(1);

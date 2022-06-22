@@ -4,12 +4,12 @@ const { Pokemon, Type } = require('../db.js')
 
 
 //-----------BUSCAR POR NOMBRE----------//
-async function getPokemons(req, res,) {
+async function getPokemons(req, res, next) {
     try {
         const { name } = req.query;
         const totalPokemon = await allPokemons() // guardo en una variable el llamado de todo los poquemons tanto de db como de api
         if (name) {
-            let pokemonName = totalPokemon.filter((elemento) => elemento.name.toLowerCase() === name.toLowerCase());
+            let pokemonName = await totalPokemon.filter((elemento) => elemento.name.toLowerCase() === name.toLowerCase());
             //aca estoy filtrado por nombre y viendo si el nombre pasado por //query existe en mi bd o en la api,
             // pero tambien los paso a miniscula ambos tanto mi listado de nombre como el pasado por query para evitar errores
 
@@ -31,7 +31,7 @@ async function getPokemons(req, res,) {
         }
 
     } catch (error) {
-
+        next(error)
     }
 
 

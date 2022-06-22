@@ -53,7 +53,7 @@ function CreatePokemon() {
         if (e.target.value === "Select") {
             return
         }
-        if (input.types.length > 2) {
+        if (input.types.length > 1) {
             return
         }
         if (input.types.includes(e.target.value)) {

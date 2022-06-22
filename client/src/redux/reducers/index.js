@@ -9,11 +9,12 @@ import {
     FILTER_ASC_DES,
     FILTER_BY_ATTACK,
     
+
 } from '../actions/index.js'
 
 const initialState = {
     pokemons: [],
-    pokemonsid: {},
+    pokemonsId: {},
     pokemosType: [],
     copyPokemos: [],
 }
@@ -33,8 +34,10 @@ function rootReducer(state = initialState, action) {
         case GET_BY_ID:
             return {
                 ...state,
-                pokemonsid: action.payload,
+                pokemonsId: action.payload,
             }
+       
+
         case GET_TYPES:
             return {
                 ...state,

@@ -4,20 +4,20 @@ import s from "../NavBar/NavBar.module.css"
 import img from '../../Imagenes/pikachu2.png'
 import { Link } from 'react-router-dom'
 
-
-//import { useDispatch } from "react-redux";
+//import {getAllPokemons} from '../../redux/actions'
+import { useDispatch } from "react-redux";
 
 
 
 function NavBar() {
 
- //   const dispatch = useDispatch();
+    //const dispatch = useDispatch();
 
 
 
-    function handleClick(e) {//handleclick seria resolverclick
+    function handleClick(e) {
         e.preventDefault();
-        //dispatch(getAllPokemons()); // me refresca solo la home
+     //   dispatch(getAllPokemons()); // me refresca solo la home
         window.location.reload(); // refresca toda la pagina
     }
 
@@ -25,7 +25,7 @@ function NavBar() {
     return (
         <div className={s.container}>
             <div className={s.titlenav}>
-                <h1 >Pi POKEMONS </h1>
+                <h1 >Pi PoKeMoNs </h1>
             </div>
 
             <div className={s.secontcontain}>

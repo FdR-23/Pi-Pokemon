@@ -13,7 +13,7 @@ function DetailsPokemon() {
     const {id} = useParams()
     const dispatch = useDispatch();
 
-    const detailspoke = useSelector((state) => state.pokemonsid);
+    const detailspoke = useSelector((state) => state.pokemonsId);
 
     useEffect(() => {
         dispatch(getById(id))

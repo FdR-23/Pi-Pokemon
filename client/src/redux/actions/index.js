@@ -17,6 +17,7 @@ export const FILTER_BY_ATTACK = 'FILTER_BY_ATTACK';
 
 
 
+
 export function getAllPokemons() {
     return async function (dispatch) {
         try {
@@ -62,6 +63,7 @@ export function getById(id) {
         }
     }
 }
+
 
 export function getTypes() {
     return async function (dispatch) {
