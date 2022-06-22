@@ -18,5 +18,6 @@ router.get('/pokemons', getPokemons)
 router.get('/pokemons/:id', getPokemonById)
 router.post('/pokemons/create', createPokemon)
 
+
 router.get('/types', getAllTypes)
 module.exports = router;

@@ -9,11 +9,11 @@ async function getPokemons(req, res,) {
         const { name } = req.query;
         const totalPokemon = await allPokemons() // guardo en una variable el llamado de todo los poquemons tanto de db como de api
         if (name) {
-            let pokemonName = await totalPokemon.filter((elemento) => elemento.name.toLowerCase() === name.toLowerCase()); 
+            let pokemonName = totalPokemon.filter((elemento) => elemento.name.toLowerCase() === name.toLowerCase());
             //aca estoy filtrado por nombre y viendo si el nombre pasado por //query existe en mi bd o en la api,
             // pero tambien los paso a miniscula ambos tanto mi listado de nombre como el pasado por query para evitar errores
 
-            if (!pokemonName.length) {
+            if (pokemonName.length) {
                 res
                     .status(200)
                     .send(pokemonName)
@@ -113,9 +113,31 @@ async function createPokemon(req, res) {
 }
 
 
+async function deletPokemon(req, res) {
+    let { id } = req.params
+    try {
+
+
+        await Pokemon.destroy({
+            where: {
+                id,
+            }
+
+        });
+        res
+            .status(200)
+            .send('Usuario eliminado')
+    } catch (error) {
+        res
+            .status(400)
+            .send("No se pudo eliminar el usuario")
+    }
+}
+
 
 module.exports = {
     getPokemons,
     createPokemon,
-    getPokemonById
+    getPokemonById,
+    deletPokemon
 }

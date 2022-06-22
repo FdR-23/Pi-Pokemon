@@ -10,14 +10,14 @@ import NavBar from '../NavBar/NavBar.jsx';
 
 function DetailsPokemon() {
 
-    const pokeId = useParams().id
+    const {id} = useParams()
     const dispatch = useDispatch();
 
     const detailspoke = useSelector((state) => state.pokemonsid);
 
     useEffect(() => {
-        dispatch(getById(pokeId))
-    });
+        dispatch(getById(id))
+    },[dispatch]);
 
 
 

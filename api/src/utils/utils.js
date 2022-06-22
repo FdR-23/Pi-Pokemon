@@ -11,10 +11,10 @@ const Url = 'https://pokeapi.co/api/v2/pokemon?limit=40';
 async function pokemonsApi() {
     try {
         const pokemons = await axios.get(Url)
-            .then(info => info.data.results)
-            .then(data => Promise.all(data.map(resp => axios(resp.url))))
-            .then(data => data.map(resp => resp.data))
-
+        .then(info => info.data.results)
+        .then(results => Promise.all(results.map(resp => axios(resp.url))))
+        .then(url => url.map(resp => resp.data))
+        
         arrayPokemonApi = pokemons.map(result => {
             return {
                 id: result.id,

@@ -21,14 +21,13 @@ export function getAllPokemons() {
     return async function (dispatch) {
         try {
             let json = await axios.get('http://localhost:3001/pokemons')
-              
+              .then(resp =>resp.data)
             return dispatch({
 
                 type: GET_ALL_POKEMONS,
-                payload: json.data
+                payload: json
             });
         } catch (error) {
-            console.log(error.message);
             return alert(
                  "Hubo un error al cargar la informacion. Intenta en unos minutos"
             );

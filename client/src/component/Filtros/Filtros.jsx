@@ -113,7 +113,7 @@ function Filtros({ setpage }) {
             <div className="seach_nav">
 
              
-                    <label>Search By Name: <input valur=""
+                    <label>Search By Name: <input 
                         value={name}
                         onChange={(e) => handleChance(e)}
                         type="text"
