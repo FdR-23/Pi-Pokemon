@@ -6,7 +6,6 @@ const axios = require('axios')
 const Url = 'https://pokeapi.co/api/v2/pokemon';
 
 
-
 //-----LLAMADO DESDE LA API-----//
 async function pokemonsApi() {
     try {
@@ -33,6 +32,7 @@ async function pokemonsApi() {
                 types: result.types.map((elemento) => elemento.type.name),
                 image: result.sprites.other['official-artwork'].front_default,
                 attack: result.stats[1].base_stat,
+           
             }
         })
 
@@ -42,6 +42,8 @@ async function pokemonsApi() {
 
     }
 }
+
+
 
 //-----LLAMADO DESDE LA BASE DE DATO-----//
 async function pokemonDb() {
@@ -98,6 +100,8 @@ async function allPokemonsId(id) {
             speed: pokemons.stats[5].base_stat,
             height: pokemons.height,
             weight: pokemons.weight,
+            abilities: pokemons.abilities.map(e=>e.ability.name)
+
         }
 
         return pokeId

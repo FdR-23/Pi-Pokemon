@@ -41,7 +41,13 @@ function DetailsPokemon() {
                 <label className={s.titletype}>Type:<span className={s.statname}> {detailspoke.types
                     ? detailspoke.types.map((e) => " " + e).join(" - ")
                     : detailspoke.types}</span></label>
+                    
+                    <label className={s.titletype}>Abilities:<span className={s.statname}> {detailspoke.abilities
+                    ? detailspoke.abilities.map((e) => " " + e).join(" - ")
+                    : detailspoke.abilities}</span></label>
             </div>
+
+
 
             <div className={s.container}>
 
@@ -56,6 +62,10 @@ function DetailsPokemon() {
                         <label className={s.titlesStats}>SPEED:<span className={s.statname}>{detailspoke.speed}</span></label>
                         <label className={s.titlesStats}>HEIGHT:<span className={s.statname}>{detailspoke.height}</span></label>
                         <label className={s.titlesStats}>WEIGHT:<span className={s.statname}>{detailspoke.weight}</span></label>
+                        
+                        <label className={s.titletype}>Abilities:<span className={s.statname}> {detailspoke.abilities
+                    ? detailspoke.abilities.map((e) => " " + e).join(" - ")
+                    : detailspoke.abilities}</span></label>
                     </div>
 
                 </div>

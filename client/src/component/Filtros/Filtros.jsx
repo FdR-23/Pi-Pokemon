@@ -56,7 +56,6 @@ function Filtros({ setpage }) {
     function handleSubmit(e) {
         e.preventDefault();
         dispatch(getByName(name));
-        console.log(name)
         setName(''); // para que uan vez que escriba el pokemon y lo despache el input aparesca en blanco
         setpage(1);
     }

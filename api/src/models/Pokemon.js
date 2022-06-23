@@ -23,6 +23,9 @@ module.exports = (sequelize) => {
     hp: {
       type: DataTypes.INTEGER,
     },
+    abilities:{
+      type: DataTypes.STRING,
+    },
     attack: {
       type: DataTypes.INTEGER
     },
@@ -49,5 +52,6 @@ module.exports = (sequelize) => {
       defaultValue: true,
       allowNull: false
     }
+
   });
 };
