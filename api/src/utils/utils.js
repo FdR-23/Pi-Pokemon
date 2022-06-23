@@ -31,12 +31,9 @@ async function pokemonsApi() {
                 name: result.name,
                 types: result.types.map((elemento) => elemento.type.name),
                 image: result.sprites.other['official-artwork'].front_default,
-                attack: result.stats[1].base_stat,
-           
+                attack: result.stats[1].base_stat,  
             }
         })
-
-
         return arrayPokemonApi;
     } catch (error) {
 
@@ -89,6 +86,7 @@ async function allPokemonsId(id) {
     if (id < 10229) {//buscando en la api 10228 es el ulltimo pokemon
         const pokemons = await axios.get(`https://pokeapi.co/api/v2/pokemon/${id}`)
             .then(info => info.data)
+            
         const pokeId = {
             id: pokemons.id,
             name: pokemons.name,

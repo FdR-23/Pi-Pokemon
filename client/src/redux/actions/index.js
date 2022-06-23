@@ -60,8 +60,10 @@ export function PostPokemons(payload) {
 export function getById(id) {
     return async function (dispatch) {
         try {
-            let json = await fetch(`/pokemons/${id}`)
-                .then(info => info.json())
+            let json = await axios(`/pokemons/${id}`)
+                .then(info =>  info.data)
+          
+               console.log(json)
 
             return dispatch({
                 type: GET_BY_ID,

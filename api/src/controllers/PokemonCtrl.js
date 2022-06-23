@@ -113,31 +113,29 @@ async function createPokemon(req, res) {
 }
 
 
-async function deletPokemon(req, res) {
-    let { id } = req.params
-    try {
+// async function deletPokemon(req, res) {
+//     let { id } = req.params
+//     try {
+//         await Pokemon.destroy({
+//             where: {
+//                 id,
+//             }
 
-
-        await Pokemon.destroy({
-            where: {
-                id,
-            }
-
-        });
-        res
-            .status(200)
-            .send('Usuario eliminado')
-    } catch (error) {
-        res
-            .status(400)
-            .send("No se pudo eliminar el usuario")
-    }
-}
+//         });
+//         res
+//             .status(200)
+//             .send('Usuario eliminado')
+//     } catch (error) {
+//         res
+//             .status(400)
+//             .send("No se pudo eliminar el usuario")
+//     }
+// }
 
 
 module.exports = {
     getPokemons,
     createPokemon,
     getPokemonById,
-    deletPokemon
+//    deletPokemon
 }
