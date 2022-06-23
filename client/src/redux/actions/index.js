@@ -13,7 +13,7 @@ export const FILTER_CREATE_BY = "FILTER_CREATE_BY";
 export const FILTER_ASC_DES = "FILTER_ASC_DES";
 export const FILTER_BY_ATTACK = 'FILTER_BY_ATTACK';
 
-
+export const CLEAR_DETAIL = "CLEAR_DETAIL";
 
 
 
@@ -35,6 +35,15 @@ export function getAllPokemons() {
         };
     }
 }
+
+export function clearDetail (){
+    return {
+        type: CLEAR_DETAIL
+    }
+    
+}
+
+
 
 export function PostPokemons(payload) {
     return async function (dispatch) {

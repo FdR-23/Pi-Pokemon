@@ -73,11 +73,11 @@ function Home() {
                     ) : !pokemosCurrents.length > 0 && loading ?
                         (<Loading></Loading>) :
                         <NotFound></NotFound>
-
-
-
                 }</div>
-            
+             <Paginado
+                pokemonsPerPag={pokemonsPerPag}
+                allpoke={allpoke.length}
+                paginado={paginado} />
         </div>
     )
 

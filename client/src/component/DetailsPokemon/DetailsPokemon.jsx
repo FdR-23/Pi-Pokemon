@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 
-import { getById } from '../../redux/actions/index.js'
+import { getById, clearDetail } from '../../redux/actions/index.js'
 
 import s from '../DetailsPokemon/DetailsPokemon.module.css'
 import NavBar from '../NavBar/NavBar.jsx';
@@ -15,12 +15,15 @@ function DetailsPokemon() {
 
     const detailspoke = useSelector((state) => state.pokemonsId);
 
-    useEffect(() => {
+
+
+    useEffect( ()=>{
         dispatch(getById(id))
-    },[dispatch]);
-
-
-
+        return (()=>{
+            dispatch(clearDetail())
+        })
+    } ,[dispatch]
+    )
 
 
 

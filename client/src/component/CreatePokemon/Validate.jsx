@@ -84,10 +84,10 @@ function validateForm(input) {
 
     //Types
 
-    if (input.types.length < 1) {
-        error.types = 'Maximum 2 types'
-    } else if (input.types.length > 3) {
-        error.types = 'Maximum 3 types'
+ 
+     if (!input.types[0]){
+        error.types = 'Minimun one types'
+        
     }
 
 

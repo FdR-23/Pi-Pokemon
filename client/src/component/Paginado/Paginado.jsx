@@ -15,7 +15,7 @@ function Paginado({ pokemonsPerPag, allpoke, paginado }) {
         //nav proporcionar enlaces de navegación
         <nav>
             <ul className={s.pagination}>
-                {numbersPag && numbersPag.map(numero =>(
+                {numbersPag && numbersPag.map((numero) =>(
                     <li key ={numero} >
                         <a className={s.active} href="#" onClick={()=>paginado(numero)}>{numero}</a>
                     </li>

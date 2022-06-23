@@ -46,6 +46,7 @@ function CreatePokemon() {
             ...input,
             [e.target.name]: e.target.value
         }))
+        
     }
 
 
@@ -59,14 +60,15 @@ function CreatePokemon() {
         if (input.types.includes(e.target.value)) {
             return 'ya existe ese tipo'
         } else
-            setErrors(Validate({
-                ...input,
-                [e.target.name]: e.target.value
-            }))
-
         setInput({
             ...input, types: [...input.types, e.target.value,]
         })
+            setErrors(Validate({
+                ...input,
+                types: [...input.types, e.target.value,]
+            }))
+            
+
     }
 
     function handleDeletTypes(tipe) {
@@ -89,7 +91,8 @@ function CreatePokemon() {
             history.push("/home")
         }
     }
-
+    console.log(input.types)
+console.log(errors)
 
     return (
         <div className={styles.containerAll}>
@@ -241,8 +244,10 @@ function CreatePokemon() {
 
                             <div className={styles.insertInfo}>
                                 <label htmlFor="">Types: </label>
-                                <select onChange={(e) => handleSelect(e)}>
+                                
+                                <select onChange={(e)=>handleSelect(e)} >
                                     <option value="Select">Select</option>
+
                                     {typesPoke?.map((type) =>
                                         <option key={type.id} value={type.name}>{type.name}</option>
                                     )}

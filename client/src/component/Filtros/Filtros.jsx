@@ -28,7 +28,7 @@ function Filtros({ setpage }) {
     };
 
     function handleFilterByOrigi(e) {
-        if (e.target.value === "All") { return }
+    
         e.preventDefault();
         dispatch(filterByOrigin(e.target.value, allpoke));
         setpage(1);
@@ -92,7 +92,7 @@ function Filtros({ setpage }) {
             <div>
                 <label >Order By: </label>
                 <select onChange={handleFilterAscDes}>
-                    <option value="All">All</option>
+                    <option value="All">Order</option>
                     <option value="Asc">A - Z</option>
                     <option value="Des">Z - A</option>
 
@@ -102,7 +102,7 @@ function Filtros({ setpage }) {
                 <label >Order By attack: </label>
 
                 <select onChange={(e) => handleFilterPower(e)}>
-                    <option value="Select">Select</option>
+                    <option value="Select">Power</option>
                     <option value="MaxPower">Asc</option>
                     <option value="MinPower">Des</option>
 

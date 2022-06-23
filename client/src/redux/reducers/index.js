@@ -8,7 +8,7 @@ import {
     FILTER_CREATE_BY,
     FILTER_ASC_DES,
     FILTER_BY_ATTACK,
-    
+    CLEAR_DETAIL,
 
 } from '../actions/index.js'
 
@@ -27,6 +27,11 @@ function rootReducer(state = initialState, action) {
                 pokemons: action.payload,
                 copyPokemos: action.payload
             }
+            case CLEAR_DETAIL:
+            return {
+                ...state,
+                pokemonsId: []
+            }    
         case POST_POKEMONS:
             return {
                 ...state
