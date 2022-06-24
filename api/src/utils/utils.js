@@ -3,43 +3,30 @@ const { Pokemon, Type } = require('../db')
 const axios = require('axios')
 
 
-const Url = 'https://pokeapi.co/api/v2/pokemon';
-
-
+const Url = 'https://pokeapi.co/api/v2/pokemon?limit=100';
 //-----LLAMADO DESDE LA API-----//
 async function pokemonsApi() {
     try {
-        const pokemonsFirst20 = await axios.get(Url)
-            .then(info => info.data.results)
-            .then(results => results.map(resp => axios.get(resp.url)))
-
-        const pokemonsSecond20 = await axios.get(Url)
-            .then(info => info.data.next)
-            .then(url => axios.get(url)) // hago un get para entrar next que es otra url con los otros 20 pokemons 
-            .then(url => url.data.results.map(e => axios.get(e.url))) // hasta aca ya tengo la url para agarar la info de los 20 poke
-
-        const allpoke = pokemonsFirst20.concat(pokemonsSecond20)
-        //uno los dos llamados 
-
-        const result = await Promise.all(allpoke)
-            .then(info => info.map(resp => resp.data)) // ya entre a la data de cada un de los poke
-
-
-        const arrayPokemonApi = result.map(result => {
+        const pokemons = await axios.get(Url)
+        .then(info => info.data.results)
+        .then(results => Promise.all(results.map(resp => axios(resp.url))))
+        .then(url => url.map(resp => resp.data))
+        
+        arrayPokemonApi = pokemons.map(result => {
             return {
                 id: result.id,
                 name: result.name,
                 types: result.types.map((elemento) => elemento.type.name),
                 image: result.sprites.other['official-artwork'].front_default,
-                attack: result.stats[1].base_stat,  
+                attack: result.stats[1].base_stat,
             }
         })
+
         return arrayPokemonApi;
     } catch (error) {
 
     }
 }
-
 
 
 //-----LLAMADO DESDE LA BASE DE DATO-----//
