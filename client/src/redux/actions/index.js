@@ -48,7 +48,7 @@ export function clearDetail (){
 export function PostPokemons(payload) {
     return async function (dispatch) {
         try {
-            const sendInfo = await axios.post(`pokemons/create`, payload)
+            const sendInfo = await axios.post(`/create`, payload)
             return sendInfo;
         } catch (error) {
             alert('Error al enviar datos')

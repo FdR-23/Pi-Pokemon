@@ -13,7 +13,7 @@ function App() {
         <Route exact path='/' component={LandingPage} />
         <Route exact path='/home' component={Home} />
         <Route exact path='/pokemons/:id' component={DetailsPokemon} />
-        <Route exact path='home/create' component={CreatePokemon} />
+        <Route exact path='/create' component={CreatePokemon} />
         <Route  path='*' component={Error404} />
       </Switch>
 

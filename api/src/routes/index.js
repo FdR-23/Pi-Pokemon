@@ -16,7 +16,7 @@ const router = Router();
 
 router.get('/pokemons', getPokemons)
 router.get('/pokemons/:id', getPokemonById)
-router.post('/pokemons/create', createPokemon)
+router.post('/create', createPokemon)
 
 
 router.get('/types', getAllTypes)
