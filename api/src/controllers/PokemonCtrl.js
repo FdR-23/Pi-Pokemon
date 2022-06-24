@@ -60,7 +60,7 @@ async function getPokemonById(req, res) {
 
 
 //-----------CREAR POKEMON----------//
-ifRef = 11000;
+//ifRef = 11000;
 async function createPokemon(req, res) {
 
     const {
@@ -84,7 +84,7 @@ async function createPokemon(req, res) {
     }
 
     const newPokemon = await Pokemon.create({
-        id: ifRef++,
+        
         name,
         image,
         hp,

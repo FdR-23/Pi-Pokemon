@@ -6,10 +6,11 @@ module.exports = (sequelize) => {
   // defino el modelo
   sequelize.define('pokemon', {
     id: {
-      type: DataTypes.INTEGER, // identificador único universal, lo uso para que no se choquen los id de db y la api.
+      type: DataTypes.UUID, // identificador único universal, lo uso para que no se choquen los id de db y la api.
+      defaultValue: DataTypes.UUIDV4,
       primaryKey: true,
-      allowNull: false,
-      autoIncrement: true
+      // allowNull: false,
+      // autoIncrement: true
     },
     name: {
       type: DataTypes.STRING,
