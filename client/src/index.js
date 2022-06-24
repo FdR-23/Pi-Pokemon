@@ -9,7 +9,7 @@ import store from './redux/store'
 import dotenv from "dotenv";
 dotenv.config();
 
-axios.defaults.baseURL = process.env.REACT_APP_API || "http://localhost:3005";
+axios.defaults.baseURL = process.env.REACT_APP_API || "https://app-pokemon-api.herokuapp.com";
 
 ReactDOM.render(
   <Provider store={store}>
