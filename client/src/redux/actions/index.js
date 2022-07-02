@@ -46,7 +46,7 @@ export function clearDetail (){
 
 
 export function PostPokemons(payload) {
-    return async function (dispatch) {
+    return async function () {
         try {
             const sendInfo = await axios.post(`/create`, payload)
             return sendInfo;

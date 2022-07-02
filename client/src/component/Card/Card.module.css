@@ -10,13 +10,13 @@
 
 .card {
     display: flex;
-    flex-direction: column;
-    align-items: center;
     margin: 10px;
-    width: 30vw;
     border: transparent;
     border-radius: 10px;
-    box-shadow: 0px 2px 7px 8px rgb(0 0 0 / 20%)
+    box-shadow: 0px 2px 7px 8px rgb(0 0 0 / 20%);
+    flex-direction: column;
+    align-items: center;
+    width: 30vw;
 }
 .card:hover{
      box-shadow: 0px 0px 15px 10px rgb(0 0 0 / 50%);
@@ -27,23 +27,20 @@
 
 .title {
     font-family: PokemonHollow;
-    font-size: 2vw;
-    color:aliceblue;
-    text-shadow: 1px 1px 2px black;
+    font-size: 4vw;
+    color: rgb(76 62 0);
+    text-shadow: -1px 1px 11px #c40303;
+    margin: 0px;
 }
 
 .img {
-    margin-top: -25px;
-    width: 30vw;
-    
+    width: 25vw;  
 }
 
 .types {
-    margin-top: -80px;
-    display: flex;
-    justify-content: center;
     font-family: PokemonHollow;
-    color:aliceblue;
-    font-size: 2vw;
-    text-shadow: 1px 1px 2px black;
+    color: rgb(76 62 0);
+    text-shadow: -1px 1px 11px #c40303;
+    font-size: 2.5vw;
+    margin: 0%
 }

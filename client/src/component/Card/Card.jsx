@@ -6,23 +6,23 @@ function Card({ name, types, image, id }) {
     return (
 
         <div className={s.card}>
-            <div className={s.title}>
 
-                <h2 >{name}</h2>
-            </div>
 
-            <div >
-                <Link to={`/pokemons/${id}`}>
+            <h2 className={s.title}>{name}</h2>
 
-                    <img className={s.img} src={image} alt="imagen pokemon" />
 
-                </Link>
 
-                <div className={s.types}>
+            <Link to={`/pokemons/${id}`}>
 
-                    <h3>Type: {types}</h3>
-                </div>
-            </div>
+                <img className={s.img} src={image} alt="imagen pokemon" />
+
+            </Link>
+
+
+
+            <h3 className={s.types}>Type: {types}</h3>
+
+
 
         </div>
     )

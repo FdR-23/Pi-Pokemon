@@ -117,7 +117,7 @@ function Filtros({ setpage }) {
                         onChange={(e) => handleChance(e)}
                         type="text"
                         autoComplete="on"
-                        placeholder="ingrede datos aqui" /> </label>
+                        placeholder="Name..." /> </label>
 
                     <input onClick={handleSubmit} type="submit" value="Submit" />
 

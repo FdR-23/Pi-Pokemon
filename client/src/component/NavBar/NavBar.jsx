@@ -40,7 +40,7 @@ function NavBar() {
                 <div>
 
                     <Link to='/create'>
-                        <button>Creat Pokemon</button>
+                        <button>Create Pokemon</button>
                     </Link>
 
                 </div>

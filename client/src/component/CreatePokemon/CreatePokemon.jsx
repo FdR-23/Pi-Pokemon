@@ -50,6 +50,11 @@ function CreatePokemon() {
     }
 
 
+
+
+    
+
+
     function handleSelect(e) {
         if (e.target.value === "Select") {
             return
@@ -133,7 +138,6 @@ console.log(errors)
                                     name='image'
                                     value={input.image}
                                     onChange={handleChange}
-                                    placeholder='https:/'
                                     className={styles.inputs}
                                 />
                             </div>

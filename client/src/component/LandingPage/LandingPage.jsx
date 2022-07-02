@@ -6,6 +6,9 @@ import s from '../LandingPage/LandingPage.module.css'
 import img from '../../Imagenes/pngwing.png'
 import Loading from "../Loading/Loading";
 import { useHistory } from 'react-router-dom'
+
+
+
 function LandigPage() {
 
     const [loading, setLoading] = useState(false)
@@ -36,7 +39,7 @@ function LandigPage() {
                 <img className={s.img} src={img} alt="" />
                 <button className={s.bn} onClick={() => handleChange()}>Entrar</button>
             </div>
-            
+
         </div>
     )
 

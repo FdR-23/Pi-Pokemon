@@ -6,9 +6,11 @@ import DetailsPokemon from './component/DetailsPokemon/DetailsPokemon';
 import CreatePokemon from './component/CreatePokemon/CreatePokemon';
 import Error404 from './component/Error404/Error404';
 
+
 function App() {
   return (
     <BrowserRouter>
+
       <Switch>
         <Route exact path='/' component={LandingPage} />
         <Route exact path='/home' component={Home} />

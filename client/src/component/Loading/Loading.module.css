@@ -10,17 +10,21 @@
 
 
 .conteiner {
+  height: 100vh;
   font-family: PokemonHollow;
   text-shadow: -4px 2px 8px black;
   font-size: xx-large;
   color: #FF3D00;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  background: rgb(235 147 21);
+  display: flex;
+  /* background: rgb(235 147 21); */
+  /* justify-items: center; */
   align-items: center;
-  justify-items: center;
-    
+  justify-content: center;
 }
+    
+
+
+
 .containersecond{
   width: 30vw;
 }
