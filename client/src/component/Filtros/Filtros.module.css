@@ -27,3 +27,17 @@
   color: rgb(185 189 1);
   box-shadow: -1px 1px 8px #630000;
 }
+
+.bnbsearch{
+  background-color: rgb(182 18 18);
+  color: white;
+  padding: 4px 8px;
+  border: 2px solid;
+  border-radius: 11px;
+  margin-left: 3px;
+  margin-right: 3px;
+  box-shadow: -2px 1px 4px black;
+  cursor: pointer;
+}
+
+

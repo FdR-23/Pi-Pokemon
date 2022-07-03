@@ -29,5 +29,6 @@ ul.pagination li a.active {
 
 
 ul.pagination li a.active:hover{
+    border: 3px solid rgb(255, 255, 255);
     box-shadow: -2px 1px 4px white;
 }

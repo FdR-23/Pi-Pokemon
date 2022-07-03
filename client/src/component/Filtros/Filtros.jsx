@@ -119,7 +119,7 @@ function Filtros({ setpage }) {
                         autoComplete="on"
                         placeholder="Name..." /> </label>
 
-                    <input onClick={handleSubmit} type="submit" value="Submit" />
+                    <input className={s.bnbsearch} id="query"  onClick={handleSubmit} type="submit" value="Search" />
 
                
             </div>
