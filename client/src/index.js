@@ -10,9 +10,9 @@ import dotenv from "dotenv";
 dotenv.config();
 
 
-axios.defaults.baseURL = process.env.REACT_APP_API || "http://localhost:3001";
+//axios.defaults.baseURL = process.env.REACT_APP_API || "http://localhost:3001";
 
-//axios.defaults.baseURL = process.env.REACT_APP_API || "https://app-pokemon-api.herokuapp.com";
+axios.defaults.baseURL = process.env.REACT_APP_API || "https://app-pokemon-api.herokuapp.com";
 
 ReactDOM.render(
   <Provider store={store}>
