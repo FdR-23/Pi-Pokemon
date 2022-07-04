@@ -7,17 +7,28 @@ import img from '../../Imagenes/pngwing.png'
 import Loading from "../Loading/Loading";
 import { useHistory } from 'react-router-dom'
 
-
+import pikachusond from "../../sonido/soundPikachu.mp3"
 
 function LandigPage() {
 
     const [loading, setLoading] = useState(false)
     const history = useHistory();
 
+
+    var audio = new Audio(pikachusond)
+
+    const start = () => {
+        audio.play()
+    }
+
+
+
+
+
     function handleChange() {
 
         setLoading(true)
-
+        start();
         setTimeout(() => {
             setLoading(false)
             history.push('/home')
@@ -38,8 +49,9 @@ function LandigPage() {
             <div className={s.enter}>
                 <img className={s.img} src={img} alt="" />
                 <button className={s.bn} onClick={() => handleChange()}>Entrar</button>
-            </div>
 
+            </div>
+     
         </div>
     )
 
