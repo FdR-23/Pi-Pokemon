@@ -14,7 +14,9 @@ import Loading from "../Loading/Loading.jsx";
 
 import s from '../Home/Home.module.css'
 
+
 function Home() {
+
     const dispatch = useDispatch()
     const allpoke = useSelector((state) => state.pokemons);
 

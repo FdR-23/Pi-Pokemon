@@ -1,22 +1,27 @@
 {
   "files": {
-    "main.css": "/static/css/main.a617e044.chunk.css",
-    "main.js": "/static/js/main.3da26d5d.chunk.js",
-    "main.js.map": "/static/js/main.3da26d5d.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.272394e9.js",
-    "runtime-main.js.map": "/static/js/runtime-main.272394e9.js.map",
-    "static/js/2.9b57de5c.chunk.js": "/static/js/2.9b57de5c.chunk.js",
-    "static/js/2.9b57de5c.chunk.js.map": "/static/js/2.9b57de5c.chunk.js.map",
-    "static/js/3.c425d07a.chunk.js": "/static/js/3.c425d07a.chunk.js",
-    "static/js/3.c425d07a.chunk.js.map": "/static/js/3.c425d07a.chunk.js.map",
+    "main.css": "/static/css/main.744a7b90.chunk.css",
+    "main.js": "/static/js/main.cd0479a7.chunk.js",
+    "main.js.map": "/static/js/main.cd0479a7.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.14e9f6f2.js",
+    "runtime-main.js.map": "/static/js/runtime-main.14e9f6f2.js.map",
+    "static/js/2.280baded.chunk.js": "/static/js/2.280baded.chunk.js",
+    "static/js/2.280baded.chunk.js.map": "/static/js/2.280baded.chunk.js.map",
+    "static/js/3.c400dff6.chunk.js": "/static/js/3.c400dff6.chunk.js",
+    "static/js/3.c400dff6.chunk.js.map": "/static/js/3.c400dff6.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.a617e044.chunk.css.map": "/static/css/main.a617e044.chunk.css.map",
-    "static/js/2.9b57de5c.chunk.js.LICENSE.txt": "/static/js/2.9b57de5c.chunk.js.LICENSE.txt"
+    "static/css/main.744a7b90.chunk.css.map": "/static/css/main.744a7b90.chunk.css.map",
+    "static/js/2.280baded.chunk.js.LICENSE.txt": "/static/js/2.280baded.chunk.js.LICENSE.txt",
+    "static/media/ERROR404.1d25cbc9.png": "/static/media/ERROR404.1d25cbc9.png",
+    "static/media/Filtros.module.css": "/static/media/PokemonSolid.5d60be1f.ttf",
+    "static/media/pikachu2.bef0c010.png": "/static/media/pikachu2.bef0c010.png",
+    "static/media/pngwing.4af5fd34.png": "/static/media/pngwing.4af5fd34.png",
+    "static/media/soundPikachu.71b84535.mp3": "/static/media/soundPikachu.71b84535.mp3"
   },
   "entrypoints": [
-    "static/js/runtime-main.272394e9.js",
-    "static/js/2.9b57de5c.chunk.js",
-    "static/css/main.a617e044.chunk.css",
-    "static/js/main.3da26d5d.chunk.js"
+    "static/js/runtime-main.14e9f6f2.js",
+    "static/js/2.280baded.chunk.js",
+    "static/css/main.744a7b90.chunk.css",
+    "static/js/main.cd0479a7.chunk.js"
   ]
 }
