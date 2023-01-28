@@ -12,8 +12,8 @@ dotenv.config();
 
 
 //axios.defaults.baseURL = process.env.REACT_APP_API || "http://localhost:3001";
-
- axios.defaults.baseURL = process.env.REACT_APP_API || "https://pi-pokemon-production-e894.up.railway.app/";
+// axios.defaults.baseURL = process.env.REACT_APP_API || "https://pi-pokemon-production-e894.up.railway.app/";
+axios.defaults.baseURL = process.env.REACT_APP_API || "https://pi-pokemon-backend-gorc.onrender.com/"
 
 ReactDOM.render(
   <Provider store={store}>
